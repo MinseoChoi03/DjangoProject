@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>퀴즈를 풀어보자!</title>
+</head>
+<body>
+    {% if Quiz_list %}
+    <ol>
+        {% for s in Quiz_list %}
+        <li>
+            <a href="#none">{{s.quiz_question}}</a></br>
+        </li>
+        {% endfor %}
+    </ol>
+    {% else %}
+        <p>퀴즈 문제가 없습니다ㅠ</p>
+    {% endif %}
+
+    </br>
+</body>
+</html>

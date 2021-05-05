@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>퀴즈 만들기</title>
+</head>
+<body>
+    <form action="{% url 'Quiz:insertQuiz' %}" method="post">
+        {% csrf_token %}
+        퀴즈 : <input type="text" name="question"></br>
+        답 : <input type="text" name="answer"></br>
+        힌트 : <input type="text" name="hint"></br>
+        <input type="submit" name="register" onclick="alert('퀴즈 문제가 입력되었습니다!')"></br>
+    </form>
+</body>
+</html>
