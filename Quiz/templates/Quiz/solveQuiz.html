@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <title>퀴즈를 풀어보자!</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 </head>
 <body>
+    <div align="center">
     {% if Quiz_list %}
     <ol>
         {% for s in Quiz_list %}
@@ -14,9 +17,12 @@
         {% endfor %}
     </ol>
     {% else %}
-        <p>퀴즈 문제가 없습니다ㅠ</p>
+    <p>퀴즈 문제가 없습니다ㅠ</p>
+    <button class="btn btn-primary" type="button" style="WIDTH: 300pt; HEIGHT: 100pt"
+        onclick="location.href='{% url 'Quiz:questions' %}'">퀴즈 문제 만들러 가기</button>
     {% endif %}
 
     </br>
+    </div>
 </body>
 </html>

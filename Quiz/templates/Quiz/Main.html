@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <title>Quiz</title>
-    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 </head>
 <body style="background-color:#DCFFDC">
-    <h1 align="center" style="margin-top:5%">Welcom To QuizWorld!</h1>
+    <h1 align="center" style="margin-top:5%">Welcome To QuizWorld!</h1>
     <div align="center" style="margin-top:13%">
     <button class="btn btn-primary" type="button" style="WIDTH: 300pt; HEIGHT: 200pt; margin-right:10%"
         onclick="location.href='{% url 'Quiz:questions' %}'">퀴즈 새롭게 작성하기</button>
