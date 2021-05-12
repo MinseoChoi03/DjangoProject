@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
-from Quiz.models import Quiz_questions, Quiz_answer
+from Quiz.models import Quiz_questions
 
 
 def main(request):
@@ -31,8 +31,6 @@ def insertQuiz(request):
 def insertAnswer(request):
     answer = request.POST['answer']
 
-    qs = Quiz_answer(answer=answer)
-    qs.save()
 
     return HttpResponseRedirect(reverse('Quiz:Check'))
 

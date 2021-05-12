@@ -12,20 +12,20 @@
             {% csrf_token %}
             <div class="form-floating mb-3">
             <label style="font-size:35px;">퀴즈 문제</label>
-                <input type="text" class="form-control" style="width:45%;"
+                <input type="text" class="form-control" style="width:45%;" autocomplete="off"
                         placeholder="ex)얼굴을 보정해주는 사진 앱은?" name="question"></br>
             </div>
             <div class="form-floating mb-3">
             <label style="font-size:35px;">답</label>
-                <input type="text" class="form-control" style="width:45%;"
+                <input type="text" class="form-control" style="width:45%;" autocomplete="off"
                         placeholder="ex)스노우" name="answer"></br>
             </div>
              <div class="form-floating mb-3">
                  <label style="font-size:35px;">힌트 </label>
-                 <input type="text" class="form-control" style="width:45%;"
+                 <input type="text" class="form-control" style="width:45%;" autocomplete="off"
                         placeholder="ex)눈을 영어로 하면?" name="hint"></br>
              </div>
-            <input class="btn btn-primary" type="submit" style="width:8%;"
+            <input class="btn btn-primary" type="submit" style="width:10%;" value="추가하기"
                    name="register" onclick="alert('퀴즈 문제가 입력되었습니다!')"></br>
         </form>
     </div>

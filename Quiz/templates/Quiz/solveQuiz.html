@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 </head>
 <body style="background-color:#DCFFDC">
+<form action="{% url 'Quiz:insertAnswer' %}" method="post">
     <div align="center" style="margin-top:5%;">
     {% if Quiz_list %}
-    <ol>
         {% for s in Quiz_list %}
             <div class="card border-primary mb-3" style="max-width: 60rem;">
                     <div class="card-body">
@@ -19,10 +19,11 @@
         {% endfor %}
         <div class="form-floating mb-3">
             <label style="font-size:35px;">답</label>
-                <input type="text" class="form-control" style="width:45%;"
+                <input type="text" class="form-control" style="width:45%;" autocomplete="off"
                         placeholder="ex)스노우" name="answer"></br>
-            </div>
-    </ol>
+        </div>
+        <input class="btn btn-primary" type="submit" style="width:13%;"
+                   name="register" value="퀴즈 점수는?"></br>
     {% else %}
     <p style="margin-top:15%; font-size:35px;">퀴즈가 없습니다 o(╥﹏╥)o</p><br>
     <button class="btn btn-primary" type="button" style="WIDTH: 300pt; HEIGHT: 100pt"
@@ -30,5 +31,6 @@
     {% endif %}
     </br>
     </div>
+</form>
 </body>
 </html>
