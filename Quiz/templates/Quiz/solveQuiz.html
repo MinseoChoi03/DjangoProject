@@ -7,14 +7,21 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 </head>
 <body style="background-color:#DCFFDC">
-    <div align="center">
+    <div align="center" style="margin-top:5%;">
     {% if Quiz_list %}
     <ol>
         {% for s in Quiz_list %}
-        <li>
-            <a href="#none">{{s.quiz_question}}</a></br>
-        </li>
+            <div class="card border-primary mb-3" style="max-width: 60rem;">
+                    <div class="card-body">
+                    <h4 class="card-title">{{s.quiz_question}}</h4>
+                    </div>
+            </div>
         {% endfor %}
+        <div class="form-floating mb-3">
+            <label style="font-size:35px;">답</label>
+                <input type="text" class="form-control" style="width:45%;"
+                        placeholder="ex)스노우" name="answer"></br>
+            </div>
     </ol>
     {% else %}
     <p style="margin-top:15%; font-size:35px;">퀴즈가 없습니다 o(╥﹏╥)o</p><br>
